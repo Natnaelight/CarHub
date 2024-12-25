@@ -38,7 +38,7 @@ export default function Home() {
 
     getCars();
   }, [fuel, year, manufacturer, model, limit]);
-  const isDataEmpty = !Array.isArray(allcars) || allcars.length < 1 || !allcars;
+
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -62,7 +62,7 @@ export default function Home() {
           <section>
             <div className="home__cars-wrapper">
               {allcars?.map((car) => (
-                <CarCard car={car} key={car.city_mpg} />
+                <CarCard car={car} key={car.city_mpg * Math.random()} />
               ))}
             </div>
             {loading && (
