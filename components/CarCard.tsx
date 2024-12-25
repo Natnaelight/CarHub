@@ -13,13 +13,9 @@ interface CarCardProps {
 function CarCard({ car }: CarCardProps) {
   const {
     city_mpg,
-    class: carClass,
-    combination_mpg,
-    cylinders,
-    displacement,
+
     drive,
-    fuel_type,
-    highway_mpg,
+
     make,
     model,
     transmission,
